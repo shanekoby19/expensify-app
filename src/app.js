@@ -13,16 +13,6 @@ import moment from 'moment';
 
 const store = configureStore();
 
-const unsubscribe = store.subscribe(() => {
-    const expenses = store.getState().expenses;
-    const filters = store.getState().filters;
-    console.log(getVisibleExpenses(expenses, filters));
-})
-
-store.dispatch(addExpense({description: 'Water bill', amount: 25000, createdAt: moment()}));
-store.dispatch(addExpense({description: 'Phone bill', amount: 75000, createdAt: moment()}));
-store.dispatch(addExpense({description: 'Gas bill', amount: 30000, createdAt: moment()}));
-
 const jsx = (
     <Provider store={store}>
         <AppRouter/>
