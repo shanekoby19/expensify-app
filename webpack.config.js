@@ -1,8 +1,7 @@
 const path = require('path');
 
-module.exports = {
+module.exports = (env) => ({
   entry: './src/app.js',
-  mode: 'development',
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js'
@@ -23,6 +22,7 @@ module.exports = {
       ]
     }]
   },
+  mode: 'development',
   devtool: 'eval-cheap-module-source-map',
   devServer: {
     historyApiFallback: true,
@@ -30,4 +30,4 @@ module.exports = {
       directory: path.join(__dirname, 'public')
     }
   }
-};
+})
