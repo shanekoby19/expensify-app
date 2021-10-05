@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a paragraph totaling a single expense 1`] = `
+<div>
+  <p>
+    Viewing 
+    1
+     
+    expense
+     totaling 
+    $1.95
+    .
+  </p>
+</div>
+`;
+
+exports[`should render a paragraph totaling all the expenses 1`] = `
+<div>
+  <p>
+    Viewing 
+    3
+     
+    expenses
+     totaling 
+    $1,141.95
+    .
+  </p>
+</div>
+`;
